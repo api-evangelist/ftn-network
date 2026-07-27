@@ -1,20 +1,66 @@
 aid: ftn-network
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ftn-network.png
 name: FTN Network
-description: FTN Network is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: FTN Network is a New York-based sports data, analytics, and content company
+  founded in 2020 that helps fans, fantasy players, and sports bettors make smarter
+  decisions. FTN operates the FTN Fantasy platform (ftnfantasy.com), publishing proprietary
+  NFL charting data, projections, DFS ownership, and betting analytics through articles,
+  livestreams, videos, and podcasts. FTN also sells a REST/JSON sports-data API covering
+  NFL, NBA, MLB, NHL, PGA, CFB, and CBB across CSV, mid-tier API, and enterprise white-label
+  plans. The company went through the Techstars Sports Tech Accelerator (2022) and is
+  backed by 11 Tribes Ventures.
 url: https://raw.githubusercontent.com/api-evangelist/ftn-network/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - techstars
+- 11-tribes-ventures
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: live-company-paywalled-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+x-enrichment-status: profiled
+x-enrichment-notes: 'Enrichment 2026-07-20: corrected the prior 2026-07-19 "parked-domain"
+  verdict. ftnnetwork.com is a GoDaddy parked lander and serves only as the company
+  email domain (contact frank@ftnnetwork.com), but FTN Network is a live company whose
+  product runs at ftnfantasy.com (LinkedIn: Information Services, founded 2020, New York,
+  51-200 employees; Techstars Sports Tech 2022; backed by 11 Tribes Ventures). FTN sells
+  a REST/JSON sports-data API (NFL/NBA/MLB/NHL/PGA/CFB/CBB) but it is paywalled and
+  sales/contact-gated: no public developer portal, docs, OpenAPI/Swagger, GitHub org,
+  Postman collection, base URL, or well-known endpoints were found. Identity was
+  corrected from real sources; no API artifacts could be produced without fabrication.
+  ftnfantasy.com returns HTTP 403 to automated fetches (Cloudflare).'
 tags:
 - Company
-apis: []
+- Sports Data
+- Fantasy Sports
+- Sports Betting
+- Analytics
+- Data
+- Sports
+- Content
+apis:
+- name: FTN Sports Data API
+  description: Paid REST/JSON sports-data API providing real-time and historical data
+    and charting for NFL, NBA, MLB, NHL, PGA, CFB, and CBB, sold across CSV, mid-tier
+    API, and enterprise white-label plans. Access is sales/contact-gated; no public
+    self-serve developer portal, docs, or base URL is published.
+  humanURL: https://ftnfantasy.com/stats/sports-data
+  properties:
+  - type: Pricing
+    url: https://ftnfantasy.com/stats/sports-data
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -22,4 +68,15 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://ftnnetwork.com/
+  url: https://ftnfantasy.com/
+- type: Pricing
+  url: https://ftnfantasy.com/stats/sports-data
+- type: LinkedIn
+  url: https://www.linkedin.com/company/ftnnetwork
+- type: Crunchbase
+  url: https://www.crunchbase.com/organization/ftn-network
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 0
+  pass: local-v1
